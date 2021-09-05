@@ -43,6 +43,7 @@ func (c *tagServiceClient) GetTagList(ctx context.Context, in *GetTagListRequest
 // for forward compatibility
 type TagServiceServer interface {
 	GetTagList(context.Context, *GetTagListRequest) (*GetTagListReply, error)
+	mustEmbedUnimplementedTagServiceServer()
 }
 
 // UnimplementedTagServiceServer must be embedded to have forward compatible implementations.

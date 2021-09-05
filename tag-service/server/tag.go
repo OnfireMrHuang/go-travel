@@ -8,7 +8,9 @@ import (
 	pb "go-travel/tag-service/proto"
 )
 
-type TagServer struct{}
+type TagServer struct {
+	pb.UnimplementedTagServiceServer
+}
 
 func NewTagServer() *TagServer {
 	return &TagServer{}
